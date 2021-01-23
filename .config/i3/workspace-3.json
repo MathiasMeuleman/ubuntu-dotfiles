@@ -1,0 +1,41 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1018,
+       "width": 938,
+       "x": 16,
+       "y": 46
+    },
+    "name": "Slack | costruction-spam | Gale",
+    "percent": 0.5,
+    "swallows": [
+       {
+         "class": "^Slack$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1018,
+       "width": 938,
+       "x": 966,
+       "y": 46
+    },
+    "name": "MongoDB Compass - Connect",
+    "percent": 0.5,
+    "swallows": [
+       {
+       "class": "^MongoDB\\ Compass$"
+       }
+    ],
+    "type": "con"
+}
+

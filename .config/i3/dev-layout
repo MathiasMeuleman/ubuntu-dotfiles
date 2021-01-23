@@ -1,0 +1,6 @@
+#!/bin/bash
+
+i3-msg "append_layout ~/.config/i3/workspace-1.json"
+i3-msg "exec webstorm nosplash"
+i3-msg "exec kitty"
+i3-msg "exec kitty"

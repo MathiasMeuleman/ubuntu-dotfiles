@@ -1,0 +1,21 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1018,
+       "width": 1888,
+       "x": 0,
+       "y": 0
+    },
+    "name": "(5) WhatsApp - Mozilla Firefox",
+    "percent": 1,
+    "swallows": [
+       {
+         "class": "^Firefox$"
+       }
+    ],
+    "type": "con"
+}
+

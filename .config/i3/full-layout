@@ -1,0 +1,25 @@
+#!/bin/bash
+
+for i in {1..3}
+do
+  i3-msg "workspace ${i}; append_layout ~/.config/i3/workspace-${i}.json"
+done
+
+# Fix some transparency issues
+killall compton
+i3-msg "exec compton -b"
+
+# Workspace 1
+i3-msg "exec webstorm nosplash"
+i3-msg "exec kitty"
+i3-msg "exec kitty"
+
+# Workspace 2
+i3-msg "exec firefox"
+
+# Workspace 3
+i3-msg "exec slack"
+i3-msg "exec mongodb-compass"
+
+# Switch view to workspace 1
+i3-msg "workspace number 1"
