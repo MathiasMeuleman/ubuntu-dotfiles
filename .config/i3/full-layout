@@ -11,8 +11,8 @@ i3-msg "exec compton -b"
 
 # Workspace 1
 i3-msg "exec webstorm nosplash"
-i3-msg "exec kitty"
-i3-msg "exec kitty"
+i3-msg "exec urxvt"
+i3-msg "exec urxvt"
 
 # Workspace 2
 i3-msg "exec firefox"

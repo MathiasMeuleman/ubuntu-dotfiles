@@ -122,6 +122,10 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# move focused workspace between monitors
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
+
 # lock screen
 bindsym $mod+n exec betterlockscreen -l dim
 
@@ -134,11 +138,14 @@ bindsym $mod+o exec --no-startup-id ~/.config/i3/full-layout
 # open file manager
 
 # take screenshot
-bindsym Print exec flameshot gui
+bindsym $mod+p exec flameshot gui
+bindsym $mod+Shift+p exec peek
 
 # bind function keys
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym $mod+u exec light -U 5
+bindsym $mod+i exec light -A 5
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 5%- unmute
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 5%+ unmute
 bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
@@ -183,9 +190,9 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
-exec --no-startup-id "compton -b"
-exec --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id "/usr/bin/feh --bg-fill $HOME/.config/wallpapers/vibrant-city-Pc7.jpg"
+exec --no-startup-id "compton -b --config ~/.config/compton.conf"
+exec --no-startup-id "~/.config/polybar/launch_polybar.sh"
+exec --no-startup-id "/usr/bin/feh --bg-fill $HOME/.config/wallpapers/wallhaven-md3vjm_1920x1080.png"
 exec --no-startup-id "redshift"
 exec --no-startup-id "~/.config/i3/battery-warning -n -L 20 -t 1m"
 
@@ -208,7 +215,6 @@ for_window [instance="gnome-calculator"] floating enable;
 for_window [class=".*"] border pixel 1
 gaps inner 10
 gaps outer -10
-gaps top 5
 smart_borders on
 
 client.focused #FF0000 #CC0000 #ffffff #2e9ef4 #285577

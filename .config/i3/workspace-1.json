@@ -41,7 +41,7 @@
             "percent": 0.55,
             "swallows": [
                {
-                 "instance": "^kitty$"
+                 "instance": "^urxvt$"
                }
             ],
             "type": "con"
@@ -60,7 +60,7 @@
             "percent": 0.45,
             "swallows": [
                {
-                 "instance": "^kitty$"
+                 "instance": "^urxvt$"
                }
             ],
             "type": "con"
