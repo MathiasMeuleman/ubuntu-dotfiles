@@ -22,3 +22,11 @@ Collection of configurations and issue tracker for my Linux setup
 ## Getting up and running (untested)
 - `git clone --bare <repo> ~/.dotfiles`
 - `config checkout`
+
+## Install Vim and plugins
+- Install `vim`
+- Open `vim` and run `:PlugInstall`
+
+### YouCompleteMe
+- Install `build-essential cmake vim-nox python3-dev`
+- Run `python3 ~/.vim/plugged/YouCompleteMe/install.py`
