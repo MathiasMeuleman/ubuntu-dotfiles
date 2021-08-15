@@ -107,5 +107,12 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # Enable alias completion
 unsetopt complete_aliases
 
+# Additional Git aliases
+alias gcoa="git add -A && git commit -m"
+alias gll="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
 # Dotfiles Git aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias cf='config'
+
+alias open='xdg-open'

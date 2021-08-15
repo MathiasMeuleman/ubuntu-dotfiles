@@ -123,8 +123,8 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # move focused workspace between monitors
-bindsym $mod+Ctrl+greater move workspace to output right
-bindsym $mod+Ctrl+less move workspace to output left
+bindsym $mod+Ctrl+greater move workspace to output up
+bindsym $mod+Ctrl+less move workspace to output down
 
 # lock screen
 bindsym $mod+n exec betterlockscreen -l dim
@@ -133,7 +133,7 @@ bindsym $mod+n exec betterlockscreen -l dim
 bindsym $mod+m exec --no-startup-id $HOME/.config/rofi/bin/powermenu
 
 # restore layouts
-bindsym $mod+o exec --no-startup-id ~/.config/i3/full-layout
+#bindsym $mod+o exec --no-startup-id ~/.config/i3/full-layout
 
 # open file manager
 
@@ -146,8 +146,8 @@ bindsym XF86MonBrightnessDown exec light -U 5
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym $mod+u exec light -U 5
 bindsym $mod+i exec light -A 5
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 5%- unmute
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 2%- unmute
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 2%+ unmute
 bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
 bindsym XF86AudioMicMute exec --no-startupid pactl set-source-mute 1 toggle
 
@@ -170,6 +170,10 @@ mode "resize" {
         bindsym j resize grow height 5 px or 5 ppt
         bindsym k resize shrink height 5 px or 5 ppt
         bindsym l resize grow width 5 px or 5 ppt
+        bindsym Shift+h resize shrink width 20 px or 20 ppt
+        bindsym Shift+j resize grow height 20 px or 20 ppt
+        bindsym Shift+k resize shrink height 20 px or 20 ppt
+        bindsym Shift+l resize grow width 20 px or 20 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 5 px or 5 ppt
